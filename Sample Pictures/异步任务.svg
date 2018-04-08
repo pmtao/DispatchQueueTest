@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="794px" height="304px" viewBox="0 0 794 304" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>异步任务</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="151" y="23" width="182" height="81"></rect>
+        <rect id="path-2" x="0" y="0" width="182" height="81"></rect>
+        <rect id="path-3" x="0" y="0" width="72" height="20" rx="8"></rect>
+        <rect id="path-4" x="0" y="0" width="72" height="27" rx="8"></rect>
+        <rect id="path-5" x="0" y="0" width="72" height="20" rx="8"></rect>
+        <rect id="path-6" x="152" y="142" width="182" height="81"></rect>
+        <rect id="path-7" x="436" y="140" width="338" height="115"></rect>
+        <rect id="path-8" x="0" y="0" width="72" height="27" rx="8"></rect>
+        <rect id="path-9" x="168" y="169" width="138" height="27" rx="8"></rect>
+        <rect id="path-10" x="463" y="162" width="138" height="27" rx="8"></rect>
+    </defs>
+    <g id="异步任务" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="任意队列" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="218" y="119">任意队列</tspan>
+        </text>
+        <g id="Rectangle-6-Copy">
+            <use fill="#F6F6F6" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <rect stroke="#979797" stroke-width="1" x="151.5" y="23.5" width="181" height="80"></rect>
+        </g>
+        <text id="无任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="225" y="68">无任务</tspan>
+        </text>
+        <g id="Group-Copy" transform="translate(436.000000, 24.000000)">
+            <text id="任意队列" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="67" y="96">任意队列</tspan>
+            </text>
+            <g id="Rectangle-6-Copy">
+                <use fill="#F6F6F6" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="181" height="80"></rect>
+            </g>
+        </g>
+        <g id="Group-3-Copy-3" transform="translate(28.000000, 54.000000)">
+            <g id="Rectangle-Copy">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="71" height="19" rx="8"></rect>
+            </g>
+            <text id="Async-A" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="10.222" y="15">Async A</tspan>
+            </text>
+        </g>
+        <g id="Group-3-Copy-9" transform="translate(168.000000, 255.000000)">
+            <g id="Rectangle-Copy">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="71" height="26" rx="8"></rect>
+            </g>
+            <text id="Async-A" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="10.222" y="19">Async A</tspan>
+            </text>
+        </g>
+        <g id="Group-3-Copy-5" transform="translate(496.000000, 56.000000)">
+            <g id="Rectangle-Copy">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-5"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="71" height="19" rx="8"></rect>
+            </g>
+            <text id="Async-A" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="10.222" y="15">Async A</tspan>
+            </text>
+        </g>
+        <path d="M100.5,65.5 L150.5,65.5" id="Line-3-Copy" stroke="#979797" stroke-linecap="square"></path>
+        <path id="Line-3-Copy-decoration-1" d="M150.5,65.5 L139.7,62.5 L139.7,68.5 L150.5,65.5 Z" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M371.5,67.5 L405,67.5" id="Line" stroke="#979797" stroke-width="4" stroke-linecap="square"></path>
+        <path id="Line-decoration-1" d="M405,67.5 L394.2,64.5 L394.2,70.5 L405,67.5 Z" stroke="#979797" stroke-width="4" stroke-linecap="square"></path>
+        <text id="串行队列" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="209" y="237">串行队列</tspan>
+        </text>
+        <text id="串行队列-copy" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="499" y="273">串行队列</tspan>
+        </text>
+        <g id="Rectangle-6-Copy">
+            <use fill="#F6F6F6" fill-rule="evenodd" xlink:href="#path-6"></use>
+            <rect stroke="#979797" stroke-width="1" x="152.5" y="142.5" width="181" height="80"></rect>
+        </g>
+        <g id="Rectangle-6-Copy">
+            <use fill="#F6F6F6" fill-rule="evenodd" xlink:href="#path-7"></use>
+            <rect stroke="#979797" stroke-width="1" x="436.5" y="140.5" width="337" height="114"></rect>
+        </g>
+        <text id="死锁" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#FFFFFF">
+            <tspan x="518" y="183">死锁</tspan>
+        </text>
+        <g id="Group-3-Copy-10" transform="translate(660.000000, 222.000000)">
+            <g id="Rectangle-Copy">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-8"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="71" height="26" rx="8"></rect>
+            </g>
+            <text id="Async-A" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="10.222" y="19">Async A</tspan>
+            </text>
+        </g>
+        <g id="Rectangle-Copy">
+            <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-9"></use>
+            <rect stroke="#979797" stroke-width="1" x="168.5" y="169.5" width="137" height="26" rx="8"></rect>
+        </g>
+        <g id="Rectangle-Copy-2">
+            <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-10"></use>
+            <rect stroke="#979797" stroke-width="1" x="463.5" y="162.5" width="137" height="26" rx="8"></rect>
+        </g>
+        <text id="同步任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="209" y="188">同步任务</tspan>
+        </text>
+        <text id="同步任务-copy" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="504" y="181">同步任务</tspan>
+        </text>
+        <path d="M199.5,197.5 L199.5,254.5" id="Line-3-Copy-2" stroke="#979797" stroke-linecap="square"></path>
+        <path id="Line-3-Copy-2-decoration-1" d="M199.5,254.5 L202.5,243.7 L196.5,243.7 L199.5,254.5 Z" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M371.5,181.5 L405,181.5" id="Line-Copy" stroke="#979797" stroke-width="4" stroke-linecap="square"></path>
+        <path id="Line-Copy-decoration-1" d="M405,181.5 L394.2,178.5 L394.2,184.5 L405,181.5 Z" stroke="#979797" stroke-width="4" stroke-linecap="square"></path>
+        <polyline id="Line-2" stroke="#979797" stroke-linecap="square" points="168 271 114 271 114 180 150.66055 180"></polyline>
+        <path id="Line-2-decoration-1" d="M150.66055,180 L139.86055,177 L139.86055,183 L150.66055,180 Z" stroke="#979797" stroke-linecap="square"></path>
+        <text id="新线程" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="510" y="39">新线程</tspan>
+        </text>
+        <text id="新线程-copy" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="675" y="214">新线程</tspan>
+        </text>
+        <text id="原线程" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="506" y="155">原线程</tspan>
+        </text>
+        <path d="M438.5,197.5 L773.5,197.5" id="Line-3" stroke="#979797" stroke-linecap="square"></path>
+        <polyline id="Line-4" stroke="#979797" stroke-linecap="square" points="602 176 635.039823 176 635.039823 234 659 234"></polyline>
+        <path id="Line-4-decoration-1" d="M659,234 L648.2,231 L648.2,237 L659,234 Z" stroke="#979797" stroke-linecap="square"></path>
+    </g>
+</svg>

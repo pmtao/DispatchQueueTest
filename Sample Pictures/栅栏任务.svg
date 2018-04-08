@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560px" height="237px" viewBox="0 0 560 237" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>栅栏任务</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="27" y="24" width="506" height="160"></rect>
+        <rect id="path-2" x="40" y="35" width="168" height="131" rx="8"></rect>
+        <rect id="path-3" x="349" y="35" width="168" height="131" rx="8"></rect>
+        <rect id="path-4" x="0" y="0" width="72" height="27" rx="8"></rect>
+        <rect id="path-5" x="0" y="0" width="138" height="27" rx="8"></rect>
+        <rect id="path-6" x="0" y="0" width="138" height="27" rx="8"></rect>
+        <rect id="path-7" x="0" y="0" width="138" height="27" rx="8"></rect>
+        <rect id="path-8" x="0" y="0" width="138" height="27" rx="8"></rect>
+        <rect id="path-9" x="0" y="0" width="138" height="27" rx="8"></rect>
+        <rect id="path-10" x="0" y="0" width="138" height="27" rx="8"></rect>
+    </defs>
+    <g id="栅栏任务" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="并行队列" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+            <tspan x="252" y="212">并行队列</tspan>
+        </text>
+        <g id="Rectangle-6-Copy">
+            <use fill="#F6F6F6" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <rect stroke="#979797" stroke-width="1" x="27.5" y="24.5" width="505" height="159"></rect>
+        </g>
+        <g id="Rectangle">
+            <use fill="#8E8E8E" fill-rule="evenodd" xlink:href="#path-2"></use>
+            <rect stroke="#979797" stroke-width="1" x="40.5" y="35.5" width="167" height="130" rx="8"></rect>
+        </g>
+        <g id="Rectangle-Copy-3">
+            <use fill="#8E8E8E" fill-rule="evenodd" xlink:href="#path-3"></use>
+            <rect stroke="#979797" stroke-width="1" x="349.5" y="35.5" width="167" height="130" rx="8"></rect>
+        </g>
+        <text id="死锁" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#FFFFFF">
+            <tspan x="109" y="67">死锁</tspan>
+        </text>
+        <g id="Group-3-Copy-10" transform="translate(244.000000, 87.000000)">
+            <g id="Rectangle-Copy">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="71" height="26" rx="8"></rect>
+            </g>
+            <text id="barrier" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="15.143" y="19">barrier</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(54.000000, 46.000000)">
+            <g id="Rectangle-Copy-2">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-5"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="137" height="26" rx="8"></rect>
+            </g>
+            <text id="任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="55" y="19">任务</tspan>
+            </text>
+        </g>
+        <g id="Group-Copy-3" transform="translate(363.000000, 46.000000)">
+            <g id="Rectangle-Copy-2">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-6"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="137" height="26" rx="8"></rect>
+            </g>
+            <text id="任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="55" y="19">任务</tspan>
+            </text>
+        </g>
+        <g id="Group-Copy" transform="translate(54.000000, 89.000000)">
+            <g id="Rectangle-Copy-2">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-7"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="137" height="26" rx="8"></rect>
+            </g>
+            <text id="任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="55" y="19">任务</tspan>
+            </text>
+        </g>
+        <g id="Group-Copy-4" transform="translate(363.000000, 89.000000)">
+            <g id="Rectangle-Copy-2">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-8"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="137" height="26" rx="8"></rect>
+            </g>
+            <text id="任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="55" y="19">任务</tspan>
+            </text>
+        </g>
+        <g id="Group-Copy-2" transform="translate(54.000000, 133.000000)">
+            <g id="Rectangle-Copy-2">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-9"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="137" height="26" rx="8"></rect>
+            </g>
+            <text id="任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="55" y="19">任务</tspan>
+            </text>
+        </g>
+        <g id="Group-Copy-5" transform="translate(363.000000, 133.000000)">
+            <g id="Rectangle-Copy-2">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-10"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="137" height="26" rx="8"></rect>
+            </g>
+            <text id="任务" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                <tspan x="55" y="19">任务</tspan>
+            </text>
+        </g>
+        <path d="M206.5,98.5 L243.5,98.5" id="Line" stroke="#979797" stroke-linecap="square"></path>
+        <path id="Line-decoration-1" d="M243.5,98.5 L232.7,95.5 L232.7,101.5 L243.5,98.5 Z" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M316.5,99.5 L348.5,99.5" id="Line-2" stroke="#979797" stroke-linecap="square"></path>
+        <path id="Line-2-decoration-1" d="M348.5,99.5 L337.7,96.5 L337.7,102.5 L348.5,99.5 Z" stroke="#979797" stroke-linecap="square"></path>
+    </g>
+</svg>

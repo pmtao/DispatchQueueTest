@@ -1,24 +1,632 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HDc-kG-kE5">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--调度任务测试-->
+        <scene sceneID="zKa-af-jzo">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="x2f-Ha-JYT" customClass="QueueTestListTableViewController" customModule="DispatchQueueTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="oXF-w5-gTu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="同步任务" id="DeA-Ms-iq5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="QnD-AB-quj">
+                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QnD-AB-quj" id="a9v-IE-UHs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2u-q4-ynI">
+                                                    <rect key="frame" x="45" y="6" width="160" height="30"/>
+                                                    <state key="normal" title="串行队列-新增同步任务"/>
+                                                    <connections>
+                                                        <action selector="syncTaskButton1Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="olQ-p0-OVZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="k2u-q4-ynI" firstAttribute="leading" secondItem="a9v-IE-UHs" secondAttribute="leading" constant="45" id="2qa-MG-Lzp"/>
+                                                <constraint firstItem="k2u-q4-ynI" firstAttribute="centerY" secondItem="a9v-IE-UHs" secondAttribute="centerY" id="3XY-ga-xdC"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k2u-q4-ynI" secondAttribute="trailing" id="pKs-QH-tbf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="E5S-tv-W8G">
+                                        <rect key="frame" x="0.0" y="99.333333333333343" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E5S-tv-W8G" id="Aau-qA-HRC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijs-PV-bXa">
+                                                    <rect key="frame" x="45" y="7" width="206" height="30"/>
+                                                    <state key="normal" title="串行队列-嵌套同队列同步任务"/>
+                                                    <connections>
+                                                        <action selector="syncTaskButton2Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="8Dw-gx-dXF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ijs-PV-bXa" firstAttribute="leading" secondItem="Aau-qA-HRC" secondAttribute="leading" constant="45" id="6YQ-a6-cO8"/>
+                                                <constraint firstItem="Ijs-PV-bXa" firstAttribute="centerY" secondItem="Aau-qA-HRC" secondAttribute="centerY" id="jue-Vm-GTj"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ijs-PV-bXa" secondAttribute="trailing" constant="20" symbolic="YES" id="pOt-28-pLa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="wfC-Fb-Vxz">
+                                        <rect key="frame" x="0.0" y="143.33333333333334" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wfC-Fb-Vxz" id="ZkK-fu-RON">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBy-nP-xdZ">
+                                                    <rect key="frame" x="45" y="7" width="206" height="30"/>
+                                                    <state key="normal" title="并行队列-嵌套同队列同步任务"/>
+                                                    <connections>
+                                                        <action selector="syncTaskButton3Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="vCQ-TV-qiE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TBy-nP-xdZ" firstAttribute="leading" secondItem="ZkK-fu-RON" secondAttribute="leading" constant="45" id="Npp-BN-F9B"/>
+                                                <constraint firstItem="TBy-nP-xdZ" firstAttribute="centerY" secondItem="ZkK-fu-RON" secondAttribute="centerY" id="Wq3-Ir-T5G"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TBy-nP-xdZ" secondAttribute="trailing" constant="20" symbolic="YES" id="dK6-la-qod"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="ov8-LC-YmB">
+                                        <rect key="frame" x="0.0" y="187.33333333333334" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ov8-LC-YmB" id="TUT-Rv-aBF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awF-M0-AiF">
+                                                    <rect key="frame" x="45" y="7" width="222" height="30"/>
+                                                    <state key="normal" title="串行队列-嵌套不同队列同步任务"/>
+                                                    <connections>
+                                                        <action selector="syncTaskButton4Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="lXl-YU-dWR"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="awF-M0-AiF" secondAttribute="trailing" constant="20" symbolic="YES" id="75g-hg-JEU"/>
+                                                <constraint firstItem="awF-M0-AiF" firstAttribute="centerY" secondItem="TUT-Rv-aBF" secondAttribute="centerY" id="Px5-Uh-s1H"/>
+                                                <constraint firstItem="awF-M0-AiF" firstAttribute="leading" secondItem="TUT-Rv-aBF" secondAttribute="leading" constant="45" id="pwf-nH-5WP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="异步任务" id="Gim-19-9qa">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Msn-d0-WFT">
+                                        <rect key="frame" x="0.0" y="287.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Msn-d0-WFT" id="kRx-eJ-AM5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTR-zo-c47">
+                                                    <rect key="frame" x="45" y="6" width="160" height="30"/>
+                                                    <state key="normal" title="并行队列-新增异步任务"/>
+                                                    <connections>
+                                                        <action selector="asyncTaskButton1Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="E3V-h7-61f"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PTR-zo-c47" secondAttribute="trailing" constant="20" symbolic="YES" id="2g5-Lm-8Hq"/>
+                                                <constraint firstItem="PTR-zo-c47" firstAttribute="centerY" secondItem="kRx-eJ-AM5" secondAttribute="centerY" id="sxH-hN-BTa"/>
+                                                <constraint firstItem="PTR-zo-c47" firstAttribute="leading" secondItem="kRx-eJ-AM5" secondAttribute="leading" constant="45" id="wMq-b1-mcp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Do6-nb-3pM">
+                                        <rect key="frame" x="0.0" y="331.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Do6-nb-3pM" id="Dtx-RP-bpa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eK-5A-Cv7">
+                                                    <rect key="frame" x="45" y="6" width="160" height="30"/>
+                                                    <state key="normal" title="串行队列-新增异步任务"/>
+                                                    <connections>
+                                                        <action selector="asyncTaskButton2Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="Xl2-WA-yiD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4eK-5A-Cv7" firstAttribute="leading" secondItem="Dtx-RP-bpa" secondAttribute="leading" constant="45" id="5Ks-cD-Mjs"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4eK-5A-Cv7" secondAttribute="trailing" constant="20" symbolic="YES" id="Bnu-WP-hv8"/>
+                                                <constraint firstItem="4eK-5A-Cv7" firstAttribute="centerY" secondItem="Dtx-RP-bpa" secondAttribute="centerY" id="Mt0-LW-XhO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="PqF-cF-KYy">
+                                        <rect key="frame" x="0.0" y="375.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PqF-cF-KYy" id="G2O-m7-eBk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY0-yI-S4k">
+                                                    <rect key="frame" x="45" y="6" width="237" height="30"/>
+                                                    <state key="normal" title="串行队列-同步任务中执行异步任务"/>
+                                                    <connections>
+                                                        <action selector="asyncTaskButton3Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="fz3-Tq-diu"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xY0-yI-S4k" firstAttribute="leading" secondItem="G2O-m7-eBk" secondAttribute="leading" constant="45" id="3Y1-EU-MZ1"/>
+                                                <constraint firstItem="xY0-yI-S4k" firstAttribute="centerY" secondItem="G2O-m7-eBk" secondAttribute="centerY" id="fPt-jW-mAC"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xY0-yI-S4k" secondAttribute="trailing" constant="20" symbolic="YES" id="oNX-UZ-sDW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="特殊任务" id="j3n-6S-wMw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="1Gm-Pt-4WP">
+                                        <rect key="frame" x="0.0" y="475.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Gm-Pt-4WP" id="fYe-Ls-M7u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfX-AR-FEc">
+                                                    <rect key="frame" x="45" y="6" width="62" height="30"/>
+                                                    <state key="normal" title="栅栏任务"/>
+                                                    <connections>
+                                                        <action selector="specialTaskButton1Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="kqR-NY-nkE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lfX-AR-FEc" firstAttribute="leading" secondItem="fYe-Ls-M7u" secondAttribute="leading" constant="45" id="8Tf-GY-6y2"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lfX-AR-FEc" secondAttribute="trailing" constant="20" symbolic="YES" id="W1y-XA-wgd"/>
+                                                <constraint firstItem="lfX-AR-FEc" firstAttribute="centerY" secondItem="fYe-Ls-M7u" secondAttribute="centerY" id="YRw-pS-f2Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="BmB-bz-u6g">
+                                        <rect key="frame" x="0.0" y="519.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BmB-bz-u6g" id="Xfv-tG-eCw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1N2-ce-9wc">
+                                                    <rect key="frame" x="45" y="6" width="62" height="30"/>
+                                                    <state key="normal" title="迭代任务"/>
+                                                    <connections>
+                                                        <action selector="specialTaskButton2Tapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="FFh-11-bgm"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1N2-ce-9wc" firstAttribute="centerY" secondItem="Xfv-tG-eCw" secondAttribute="centerY" id="aW6-Ux-lZW"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1N2-ce-9wc" secondAttribute="trailing" constant="20" symbolic="YES" id="koN-YV-Ej8"/>
+                                                <constraint firstItem="1N2-ce-9wc" firstAttribute="leading" secondItem="Xfv-tG-eCw" secondAttribute="leading" constant="45" id="rNc-6n-3sU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="延迟加入队列" id="opE-3d-XMN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="7rk-AI-j9l">
+                                        <rect key="frame" x="0.0" y="619.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7rk-AI-j9l" id="udQ-ml-msF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8R-Bj-ayB">
+                                                    <rect key="frame" x="45" y="7" width="92" height="30"/>
+                                                    <state key="normal" title="延迟加入队列"/>
+                                                    <connections>
+                                                        <action selector="ayncAfterButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="xpy-FL-lya"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S8R-Bj-ayB" secondAttribute="trailing" id="KSK-1U-bLD"/>
+                                                <constraint firstItem="S8R-Bj-ayB" firstAttribute="centerY" secondItem="udQ-ml-msF" secondAttribute="centerY" id="LDO-9u-rqA"/>
+                                                <constraint firstItem="S8R-Bj-ayB" firstAttribute="leading" secondItem="udQ-ml-msF" secondAttribute="leading" constant="45" id="zJO-3h-M0A"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="EZC-Lx-PvU">
+                                        <rect key="frame" x="0.0" y="663.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EZC-Lx-PvU" id="xLE-2N-1Vg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi3-68-TSc">
+                                                    <rect key="frame" x="45" y="7" width="138" height="30"/>
+                                                    <state key="normal" title="任务延迟截止前取消"/>
+                                                    <connections>
+                                                        <action selector="ayncAfterCancelButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="uGl-KM-iBh"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wi3-68-TSc" firstAttribute="centerY" secondItem="xLE-2N-1Vg" secondAttribute="centerY" id="Lcu-Mg-ksx"/>
+                                                <constraint firstItem="Wi3-68-TSc" firstAttribute="leading" secondItem="xLE-2N-1Vg" secondAttribute="leading" constant="45" id="UNc-La-Web"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wi3-68-TSc" secondAttribute="trailing" constant="20" symbolic="YES" id="hon-rG-Ltd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="U42-xs-2qY">
+                                        <rect key="frame" x="0.0" y="707.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U42-xs-2qY" id="g8e-34-wD4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28D-qS-OTr">
+                                                    <rect key="frame" x="45" y="7" width="199" height="30"/>
+                                                    <state key="normal" title="任务延迟截止前替换为新任务"/>
+                                                    <connections>
+                                                        <action selector="ayncAfterNewTaskButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="0HA-5w-rPS"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="28D-qS-OTr" firstAttribute="leading" secondItem="g8e-34-wD4" secondAttribute="leading" constant="45" id="J0R-ZD-0Xz"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="28D-qS-OTr" secondAttribute="trailing" id="NRZ-0M-aMa"/>
+                                                <constraint firstItem="28D-qS-OTr" firstAttribute="centerY" secondItem="g8e-34-wD4" secondAttribute="centerY" id="ugb-oL-pG3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="挂起和唤醒" id="xB5-Ix-g84">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="zf5-wq-dbd">
+                                        <rect key="frame" x="0.0" y="807.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zf5-wq-dbd" id="me0-KL-KM5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByY-iv-7rO">
+                                                    <rect key="frame" x="45" y="6" width="31" height="30"/>
+                                                    <state key="normal" title="挂起"/>
+                                                    <connections>
+                                                        <action selector="suspendButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="1HS-7B-0hd"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ByY-iv-7rO" firstAttribute="centerY" secondItem="me0-KL-KM5" secondAttribute="centerY" id="ZrW-12-Kny"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ByY-iv-7rO" secondAttribute="trailing" constant="20" symbolic="YES" id="kb8-iD-i7H"/>
+                                                <constraint firstItem="ByY-iv-7rO" firstAttribute="leading" secondItem="me0-KL-KM5" secondAttribute="leading" constant="45" id="wDE-ri-0au"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="s5Q-it-a7X">
+                                        <rect key="frame" x="0.0" y="851.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s5Q-it-a7X" id="fe0-2D-K4R">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-qQ-mvY">
+                                                    <rect key="frame" x="45" y="6" width="31" height="30"/>
+                                                    <state key="normal" title="唤醒"/>
+                                                    <connections>
+                                                        <action selector="resumeButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="qTx-3M-uJ9"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rU5-qQ-mvY" firstAttribute="centerY" secondItem="fe0-2D-K4R" secondAttribute="centerY" id="aZs-n4-biB"/>
+                                                <constraint firstItem="rU5-qQ-mvY" firstAttribute="leading" secondItem="fe0-2D-K4R" secondAttribute="leading" constant="45" id="mx5-6k-xgA"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rU5-qQ-mvY" secondAttribute="trailing" constant="20" symbolic="YES" id="yzq-Pd-baQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="任务组" id="MuQ-NZ-SlV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="kif-Bb-iJ2">
+                                        <rect key="frame" x="0.0" y="951.33333333333337" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kif-Bb-iJ2" id="KcC-ca-5DW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-kg-uqV">
+                                                    <rect key="frame" x="45" y="6" width="77" height="30"/>
+                                                    <state key="normal" title="创建任务组"/>
+                                                    <connections>
+                                                        <action selector="creatTaskGroupButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="NTa-1g-8rD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kxD-kg-uqV" secondAttribute="trailing" constant="20" symbolic="YES" id="eu3-4h-3eA"/>
+                                                <constraint firstItem="kxD-kg-uqV" firstAttribute="leading" secondItem="KcC-ca-5DW" secondAttribute="leading" constant="45" id="fTz-zs-T2J"/>
+                                                <constraint firstItem="kxD-kg-uqV" firstAttribute="centerY" secondItem="KcC-ca-5DW" secondAttribute="centerY" id="iqO-C3-KIl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Y1a-e1-UDx">
+                                        <rect key="frame" x="0.0" y="995.33333333333337" width="375" height="44.000000000000114"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1a-e1-UDx" id="6GV-5Z-yIA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haR-cR-aux">
+                                                    <rect key="frame" x="45" y="6" width="153" height="30"/>
+                                                    <state key="normal" title="添加系统任务至任务组"/>
+                                                    <connections>
+                                                        <action selector="addSystemTaskToGroupButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="WcF-Z9-OcA"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="haR-cR-aux" firstAttribute="centerY" secondItem="6GV-5Z-yIA" secondAttribute="centerY" id="CBG-z5-j7l"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="haR-cR-aux" secondAttribute="trailing" constant="20" symbolic="YES" id="DZc-1x-g8d"/>
+                                                <constraint firstItem="haR-cR-aux" firstAttribute="leading" secondItem="6GV-5Z-yIA" secondAttribute="leading" constant="45" id="sXE-Gz-ULz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="xpz-4s-ZhG">
+                                        <rect key="frame" x="0.0" y="1039.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xpz-4s-ZhG" id="w45-Ux-obd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYt-7a-yox">
+                                                    <rect key="frame" x="45" y="6" width="215" height="30"/>
+                                                    <state key="normal" title="添加系统及自定义任务至任务组"/>
+                                                    <connections>
+                                                        <action selector="addSystemAndCustomTaskToGroupButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="cWY-Yt-Fj4"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oYt-7a-yox" secondAttribute="trailing" id="Xgx-80-E1m"/>
+                                                <constraint firstItem="oYt-7a-yox" firstAttribute="leading" secondItem="w45-Ux-obd" secondAttribute="leading" constant="45" id="m1O-yX-KDa"/>
+                                                <constraint firstItem="oYt-7a-yox" firstAttribute="centerY" secondItem="w45-Ux-obd" secondAttribute="centerY" id="wOe-Z8-zth"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="DispatchIO, DispatchData" id="Ovx-Hl-dKv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="QhI-ND-t9D">
+                                        <rect key="frame" x="0.0" y="1139.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QhI-ND-t9D" id="3lP-rr-B2m">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBq-Fl-PX9">
+                                                    <rect key="frame" x="45" y="6" width="190" height="30"/>
+                                                    <state key="normal" title="DispatchIO-单队列合并文件"/>
+                                                    <connections>
+                                                        <action selector="combineFileWithOneQueueButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="F1b-uw-Ky0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fBq-Fl-PX9" secondAttribute="trailing" constant="20" symbolic="YES" id="0hK-X5-aKU"/>
+                                                <constraint firstItem="fBq-Fl-PX9" firstAttribute="leading" secondItem="3lP-rr-B2m" secondAttribute="leading" constant="45" id="BNA-zc-Cb3"/>
+                                                <constraint firstItem="fBq-Fl-PX9" firstAttribute="centerY" secondItem="3lP-rr-B2m" secondAttribute="centerY" id="PLI-jV-eD5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="6rW-qz-uhr">
+                                        <rect key="frame" x="0.0" y="1183.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rW-qz-uhr" id="Ues-8G-Mao">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHE-gh-wtt">
+                                                    <rect key="frame" x="45" y="6" width="190" height="30"/>
+                                                    <state key="normal" title="DispatchIO-双队列合并文件"/>
+                                                    <connections>
+                                                        <action selector="combineFileWithMoreQueuesButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="ieS-lx-Rpo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jHE-gh-wtt" firstAttribute="centerY" secondItem="Ues-8G-Mao" secondAttribute="centerY" id="FHM-Dt-OGk"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jHE-gh-wtt" secondAttribute="trailing" constant="20" symbolic="YES" id="jOS-q6-y6h"/>
+                                                <constraint firstItem="jHE-gh-wtt" firstAttribute="leading" secondItem="Ues-8G-Mao" secondAttribute="leading" constant="45" id="uLT-KN-cmj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="hwO-MP-v2F">
+                                        <rect key="frame" x="0.0" y="1227.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hwO-MP-v2F" id="3E4-b6-uPX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsK-eM-JAd">
+                                                    <rect key="frame" x="45" y="6" width="132" height="30"/>
+                                                    <state key="normal" title="通过 Data 合并文件"/>
+                                                    <connections>
+                                                        <action selector="combineFileUsingDataButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="1ld-cO-CnL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XsK-eM-JAd" firstAttribute="leading" secondItem="3E4-b6-uPX" secondAttribute="leading" constant="45" id="BDz-h7-1mW"/>
+                                                <constraint firstItem="XsK-eM-JAd" firstAttribute="centerY" secondItem="3E4-b6-uPX" secondAttribute="centerY" id="VeE-DT-1ub"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XsK-eM-JAd" secondAttribute="trailing" constant="20" symbolic="YES" id="jmU-va-MEo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="YCK-QF-eJa">
+                                        <rect key="frame" x="0.0" y="1271.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YCK-QF-eJa" id="L81-Gk-DKv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeH-fy-6Bq">
+                                                    <rect key="frame" x="45" y="6" width="193" height="30"/>
+                                                    <state key="normal" title="通过 DispatchData 合并文件"/>
+                                                    <connections>
+                                                        <action selector="combineFileWithDispatchDataButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="U8d-7g-DN7"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GeH-fy-6Bq" firstAttribute="leading" secondItem="L81-Gk-DKv" secondAttribute="leading" constant="45" id="Wn3-Jo-Bfi"/>
+                                                <constraint firstItem="GeH-fy-6Bq" firstAttribute="centerY" secondItem="L81-Gk-DKv" secondAttribute="centerY" id="b4W-zp-B2Q"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GeH-fy-6Bq" secondAttribute="trailing" constant="20" symbolic="YES" id="suX-iq-NvV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="其他" id="jev-ze-CDd">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="IUP-fv-407">
+                                        <rect key="frame" x="0.0" y="1371.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IUP-fv-407" id="6JL-FL-bIN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-q2-Aa1">
+                                                    <rect key="frame" x="45" y="6" width="208" height="30"/>
+                                                    <state key="normal" title="DispatchSource-修改文件监听"/>
+                                                    <connections>
+                                                        <action selector="changeFileButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="Cc5-r7-PnK"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lee-q2-Aa1" firstAttribute="centerY" secondItem="6JL-FL-bIN" secondAttribute="centerY" id="Fxo-Cg-2dQ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lee-q2-Aa1" secondAttribute="trailing" constant="20" symbolic="YES" id="PCR-Y9-AKm"/>
+                                                <constraint firstItem="Lee-q2-Aa1" firstAttribute="leading" secondItem="6JL-FL-bIN" secondAttribute="leading" constant="45" id="nLF-aA-uWh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="ecD-BH-Brx">
+                                        <rect key="frame" x="0.0" y="1415.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ecD-BH-Brx" id="J76-id-d16">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R7-6A-VxL">
+                                                    <rect key="frame" x="45" y="6" width="77" height="30"/>
+                                                    <state key="normal" title="信号量测试"/>
+                                                    <connections>
+                                                        <action selector="semaphoreTestButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="BeQ-Z4-S6l"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9R7-6A-VxL" firstAttribute="centerY" secondItem="J76-id-d16" secondAttribute="centerY" id="6E1-Rz-SNm"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9R7-6A-VxL" secondAttribute="trailing" constant="20" symbolic="YES" id="7FL-6o-jGm"/>
+                                                <constraint firstItem="9R7-6A-VxL" firstAttribute="leading" secondItem="J76-id-d16" secondAttribute="leading" constant="45" id="nKD-EH-CCY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="xQ5-fv-h5B">
+                                        <rect key="frame" x="0.0" y="1459.3333333333335" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xQ5-fv-h5B" id="Xvg-y6-2k1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y24-Aj-hMd">
+                                                    <rect key="frame" x="45" y="6" width="92" height="30"/>
+                                                    <state key="normal" title="任务对象测试"/>
+                                                    <connections>
+                                                        <action selector="dispatchWorkItemTestButtonTapped:" destination="x2f-Ha-JYT" eventType="touchUpInside" id="5mx-m5-IGC"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y24-Aj-hMd" firstAttribute="centerY" secondItem="Xvg-y6-2k1" secondAttribute="centerY" id="WSS-Hu-rKa"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y24-Aj-hMd" secondAttribute="trailing" constant="20" symbolic="YES" id="eiF-ks-FOj"/>
+                                                <constraint firstItem="Y24-Aj-hMd" firstAttribute="leading" secondItem="Xvg-y6-2k1" secondAttribute="leading" constant="45" id="s52-wh-G2p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="x2f-Ha-JYT" id="riL-rI-mcR"/>
+                            <outlet property="delegate" destination="x2f-Ha-JYT" id="d1G-8l-eAX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="调度任务测试" id="iRO-XU-kgI"/>
+                    <connections>
+                        <outlet property="addSystemAndCustomTaskToGroup" destination="oYt-7a-yox" id="QLu-SO-sOH"/>
+                        <outlet property="addSystemTaskToGroupButton" destination="haR-cR-aux" id="0Y0-6P-hA9"/>
+                        <outlet property="asyncTaskButton1" destination="PTR-zo-c47" id="mgO-VW-Iiq"/>
+                        <outlet property="asyncTaskButton2" destination="4eK-5A-Cv7" id="Re4-XG-RFx"/>
+                        <outlet property="asyncTaskButton3" destination="xY0-yI-S4k" id="Y7S-sF-kL6"/>
+                        <outlet property="ayncAfterButton" destination="S8R-Bj-ayB" id="2aZ-4K-usJ"/>
+                        <outlet property="ayncAfterCancelButton" destination="Wi3-68-TSc" id="3io-Hs-LQU"/>
+                        <outlet property="ayncAfterNewTaskButton" destination="28D-qS-OTr" id="ADL-vh-hHy"/>
+                        <outlet property="changeFileButton" destination="Lee-q2-Aa1" id="YjZ-e3-I4U"/>
+                        <outlet property="creatTaskGroupButton" destination="kxD-kg-uqV" id="iFn-Q2-1Bz"/>
+                        <outlet property="resumeButton" destination="rU5-qQ-mvY" id="YfT-hb-jDu"/>
+                        <outlet property="specialTaskButton1" destination="lfX-AR-FEc" id="zWJ-PI-gG6"/>
+                        <outlet property="specialTaskButton2" destination="1N2-ce-9wc" id="w0Q-Tg-B4b"/>
+                        <outlet property="suspendButton" destination="ByY-iv-7rO" id="Gzi-wP-SUJ"/>
+                        <outlet property="syncTaskButton1" destination="k2u-q4-ynI" id="cnf-ey-tN7"/>
+                        <outlet property="syncTaskButton2" destination="Ijs-PV-bXa" id="Tz2-w8-4u3"/>
+                        <outlet property="syncTaskButton3" destination="TBy-nP-xdZ" id="HxJ-mT-Tg3"/>
+                        <outlet property="syncTaskButton4" destination="awF-M0-AiF" id="k40-DT-CBY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10c-Ze-DFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="562.39999999999998" y="-21.428571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rQk-vX-eQz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HDc-kG-kE5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p2c-y1-2De">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x2f-Ha-JYT" kind="relationship" relationship="rootViewController" id="4OD-8o-Yoy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3v-Ta-oJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="-21"/>
         </scene>
     </scenes>
 </document>

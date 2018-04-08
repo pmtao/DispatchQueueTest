@@ -7,21 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2225FD50206B7D94004BF935 /* DispatchIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225FD4F206B7D94004BF935 /* DispatchIO.swift */; };
+		2249C326205A70290004EA9C /* CreateQueueWithTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2249C325205A70290004EA9C /* CreateQueueWithTask.swift */; };
+		2249C328205A70530004EA9C /* QueueTestListTableViewController+CreateQueueWithTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2249C327205A70530004EA9C /* QueueTestListTableViewController+CreateQueueWithTask.swift */; };
+		226B8B8C2066508000EC7666 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B8B8B2066508000EC7666 /* Enum.swift */; };
+		226B8B8E2069E35800EC7666 /* DispatchSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B8B8D2069E35800EC7666 /* DispatchSource.swift */; };
+		226B8B922069E89C00EC7666 /* QueueTestListTableViewController+DispatchSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B8B912069E89C00EC7666 /* QueueTestListTableViewController+DispatchSource.swift */; };
+		22703157207375EC00C4D6D0 /* QueueTestListTableViewController+DispatchIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22703156207375EB00C4D6D0 /* QueueTestListTableViewController+DispatchIO.swift */; };
+		22703159207379EE00C4D6D0 /* DispatchSemaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22703158207379EE00C4D6D0 /* DispatchSemaphore.swift */; };
+		22943EF22079A8B4007D3210 /* DispatchWorkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22943EF12079A8B4007D3210 /* DispatchWorkItem.swift */; };
+		22A8E7E72063E184004BCC51 /* SuspendAndResum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8E7E62063E183004BCC51 /* SuspendAndResum.swift */; };
+		22A8E7E92063E193004BCC51 /* QueueTestListTableViewController+SuspendAndResum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8E7E82063E193004BCC51 /* QueueTestListTableViewController+SuspendAndResum.swift */; };
 		22E3F1CB204EDC5000FBF594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E3F1CA204EDC5000FBF594 /* AppDelegate.swift */; };
-		22E3F1CD204EDC5000FBF594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E3F1CC204EDC5000FBF594 /* ViewController.swift */; };
 		22E3F1D0204EDC5000FBF594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E3F1CE204EDC5000FBF594 /* Main.storyboard */; };
 		22E3F1D2204EDC5000FBF594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E3F1D1204EDC5000FBF594 /* Assets.xcassets */; };
 		22E3F1D5204EDC5000FBF594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E3F1D3204EDC5000FBF594 /* LaunchScreen.storyboard */; };
+		22EFA02520560A0A00BC1814 /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA02420560A0A00BC1814 /* DispatchGroup.swift */; };
+		22EFA02720560DF700BC1814 /* QueueTestListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA02620560DF700BC1814 /* QueueTestListTableViewController.swift */; };
+		22EFA02920560F1800BC1814 /* QueueTestListTableViewController+DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA02820560F1800BC1814 /* QueueTestListTableViewController+DispatchGroup.swift */; };
+		22EFA02B20567F6900BC1814 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA02A20567F6800BC1814 /* Extension.swift */; };
+		22EFA02D20567FD100BC1814 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA02C20567FD100BC1814 /* Struct.swift */; };
+		22EFA0302057588E00BC1814 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA02F2057588E00BC1814 /* Network.swift */; };
+		22EFA0322057B8D700BC1814 /* AsyncAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA0312057B8D700BC1814 /* AsyncAfter.swift */; };
+		22EFA0342057B9EB00BC1814 /* QueueTestListTableViewController+AsyncAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFA0332057B9EB00BC1814 /* QueueTestListTableViewController+AsyncAfter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2225FD4F206B7D94004BF935 /* DispatchIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchIO.swift; sourceTree = "<group>"; };
+		2249C325205A70290004EA9C /* CreateQueueWithTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQueueWithTask.swift; sourceTree = "<group>"; };
+		2249C327205A70530004EA9C /* QueueTestListTableViewController+CreateQueueWithTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueueTestListTableViewController+CreateQueueWithTask.swift"; sourceTree = "<group>"; };
+		226B8B8B2066508000EC7666 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		226B8B8D2069E35800EC7666 /* DispatchSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSource.swift; sourceTree = "<group>"; };
+		226B8B912069E89C00EC7666 /* QueueTestListTableViewController+DispatchSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueueTestListTableViewController+DispatchSource.swift"; sourceTree = "<group>"; };
+		22703156207375EB00C4D6D0 /* QueueTestListTableViewController+DispatchIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueueTestListTableViewController+DispatchIO.swift"; sourceTree = "<group>"; };
+		22703158207379EE00C4D6D0 /* DispatchSemaphore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSemaphore.swift; sourceTree = "<group>"; };
+		22943EF12079A8B4007D3210 /* DispatchWorkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItem.swift; sourceTree = "<group>"; };
+		22A8E7E62063E183004BCC51 /* SuspendAndResum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendAndResum.swift; sourceTree = "<group>"; };
+		22A8E7E82063E193004BCC51 /* QueueTestListTableViewController+SuspendAndResum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueueTestListTableViewController+SuspendAndResum.swift"; sourceTree = "<group>"; };
 		22E3F1C7204EDC5000FBF594 /* DispatchQueueTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DispatchQueueTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E3F1CA204EDC5000FBF594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22E3F1CC204EDC5000FBF594 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22E3F1CF204EDC5000FBF594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22E3F1D1204EDC5000FBF594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22E3F1D4204EDC5000FBF594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22E3F1D6204EDC5000FBF594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22EFA02420560A0A00BC1814 /* DispatchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
+		22EFA02620560DF700BC1814 /* QueueTestListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTestListTableViewController.swift; sourceTree = "<group>"; };
+		22EFA02820560F1800BC1814 /* QueueTestListTableViewController+DispatchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueueTestListTableViewController+DispatchGroup.swift"; sourceTree = "<group>"; };
+		22EFA02A20567F6800BC1814 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		22EFA02C20567FD100BC1814 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		22EFA02F2057588E00BC1814 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		22EFA0312057B8D700BC1814 /* AsyncAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAfter.swift; sourceTree = "<group>"; };
+		22EFA0332057B9EB00BC1814 /* QueueTestListTableViewController+AsyncAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueueTestListTableViewController+AsyncAfter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +91,39 @@
 			isa = PBXGroup;
 			children = (
 				22E3F1CA204EDC5000FBF594 /* AppDelegate.swift */,
-				22E3F1CC204EDC5000FBF594 /* ViewController.swift */,
+				22EFA02620560DF700BC1814 /* QueueTestListTableViewController.swift */,
+				2249C327205A70530004EA9C /* QueueTestListTableViewController+CreateQueueWithTask.swift */,
+				2249C325205A70290004EA9C /* CreateQueueWithTask.swift */,
+				22A8E7E82063E193004BCC51 /* QueueTestListTableViewController+SuspendAndResum.swift */,
+				22A8E7E62063E183004BCC51 /* SuspendAndResum.swift */,
+				22EFA0332057B9EB00BC1814 /* QueueTestListTableViewController+AsyncAfter.swift */,
+				22EFA0312057B8D700BC1814 /* AsyncAfter.swift */,
+				22EFA02820560F1800BC1814 /* QueueTestListTableViewController+DispatchGroup.swift */,
+				22EFA02420560A0A00BC1814 /* DispatchGroup.swift */,
+				226B8B912069E89C00EC7666 /* QueueTestListTableViewController+DispatchSource.swift */,
+				226B8B8D2069E35800EC7666 /* DispatchSource.swift */,
+				22703156207375EB00C4D6D0 /* QueueTestListTableViewController+DispatchIO.swift */,
+				2225FD4F206B7D94004BF935 /* DispatchIO.swift */,
+				22703158207379EE00C4D6D0 /* DispatchSemaphore.swift */,
+				22943EF12079A8B4007D3210 /* DispatchWorkItem.swift */,
+				22EFA02E20567FE900BC1814 /* Helper */,
 				22E3F1CE204EDC5000FBF594 /* Main.storyboard */,
 				22E3F1D1204EDC5000FBF594 /* Assets.xcassets */,
 				22E3F1D3204EDC5000FBF594 /* LaunchScreen.storyboard */,
 				22E3F1D6204EDC5000FBF594 /* Info.plist */,
 			);
 			path = DispatchQueueTest;
+			sourceTree = "<group>";
+		};
+		22EFA02E20567FE900BC1814 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				22EFA02C20567FD100BC1814 /* Struct.swift */,
+				226B8B8B2066508000EC7666 /* Enum.swift */,
+				22EFA02A20567F6800BC1814 /* Extension.swift */,
+				22EFA02F2057588E00BC1814 /* Network.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +198,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E3F1CD204EDC5000FBF594 /* ViewController.swift in Sources */,
+				226B8B8E2069E35800EC7666 /* DispatchSource.swift in Sources */,
+				226B8B922069E89C00EC7666 /* QueueTestListTableViewController+DispatchSource.swift in Sources */,
+				2249C326205A70290004EA9C /* CreateQueueWithTask.swift in Sources */,
+				22703157207375EC00C4D6D0 /* QueueTestListTableViewController+DispatchIO.swift in Sources */,
 				22E3F1CB204EDC5000FBF594 /* AppDelegate.swift in Sources */,
+				22EFA02B20567F6900BC1814 /* Extension.swift in Sources */,
+				2249C328205A70530004EA9C /* QueueTestListTableViewController+CreateQueueWithTask.swift in Sources */,
+				22A8E7E92063E193004BCC51 /* QueueTestListTableViewController+SuspendAndResum.swift in Sources */,
+				22EFA02D20567FD100BC1814 /* Struct.swift in Sources */,
+				22EFA0322057B8D700BC1814 /* AsyncAfter.swift in Sources */,
+				22EFA0302057588E00BC1814 /* Network.swift in Sources */,
+				226B8B8C2066508000EC7666 /* Enum.swift in Sources */,
+				22EFA0342057B9EB00BC1814 /* QueueTestListTableViewController+AsyncAfter.swift in Sources */,
+				22703159207379EE00C4D6D0 /* DispatchSemaphore.swift in Sources */,
+				22EFA02720560DF700BC1814 /* QueueTestListTableViewController.swift in Sources */,
+				22EFA02520560A0A00BC1814 /* DispatchGroup.swift in Sources */,
+				22EFA02920560F1800BC1814 /* QueueTestListTableViewController+DispatchGroup.swift in Sources */,
+				22943EF22079A8B4007D3210 /* DispatchWorkItem.swift in Sources */,
+				22A8E7E72063E184004BCC51 /* SuspendAndResum.swift in Sources */,
+				2225FD50206B7D94004BF935 /* DispatchIO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,14 +354,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WBJVGLUJ4;
 				INFOPLIST_FILE = DispatchQueueTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinkingsoul.DispatchQueueTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,14 +372,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WBJVGLUJ4;
 				INFOPLIST_FILE = DispatchQueueTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinkingsoul.DispatchQueueTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

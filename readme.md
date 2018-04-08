@@ -4,7 +4,7 @@
 
 教程离线版下载地址：
 
-- [HTML 版](https://github.com/pmtao/DispatchQueueTest/blob/master/Tutorial/iOS Swift GCD 开发教程 HTML 版.zip)
-- [PDF 版](https://github.com/pmtao/DispatchQueueTest/blob/master/Tutorial/iOS Swift GCD 开发教程.pdf)
+- [HTML 版](https://github.com/pmtao/DispatchQueueTest/blob/master/Tutorial/iOS%20Swift%20GCD%20%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B%20HTML%20%E7%89%88.zip)
+- [PDF 版](https://github.com/pmtao/DispatchQueueTest/blob/master/Tutorial/iOS%20Swift%20GCD%20%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B.pdf)
 
 本工程基于 [MIT 协议](https://github.com/pmtao/DispatchQueueTest/blob/master/LICENSE) 发布 © 2018 [Sinking Soul](https://melerpaine.com)
